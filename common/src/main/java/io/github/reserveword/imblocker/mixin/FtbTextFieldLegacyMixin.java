@@ -23,7 +23,7 @@ public abstract class FtbTextFieldLegacyMixin extends FtbWidgetMixin implements 
 		onMinecraftWidgetFocusChanged(isFocused);
 	}
 
-	@Inject(method = "onClosed", at = @At("TAIL"))
+	@Override
 	public void cancelFocus(CallbackInfo ci) {
 		onMinecraftWidgetFocusLost();
 	}
